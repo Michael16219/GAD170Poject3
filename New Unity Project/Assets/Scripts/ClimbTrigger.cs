@@ -8,7 +8,7 @@ public class ClimbTrigger : MonoBehaviour
     public float moveSpeed = 5f;
 
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
@@ -16,7 +16,7 @@ public class ClimbTrigger : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
@@ -25,7 +25,7 @@ public class ClimbTrigger : MonoBehaviour
     }
     void Update()
     {
-        while (PlayerClimb = true)
+        while (bool.PlayerClimb = true)
         {
             GetComponent<PlayerController>();
             if (Input.GetKey(KeyCode.W) == true) {transform.position += transform.up * Time.deltaTime * this.moveSpeed; }
