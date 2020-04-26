@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 moveDirection;
     public float gravityScale;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -47,5 +46,10 @@ public class PlayerController : MonoBehaviour
 
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
         controller.Move(moveDirection * Time.deltaTime);
+
+        if (GetComponent<ClimbTrigger>().PlayerClimb == true)
+        {
+            if (Input.GetKey(KeyCode.W) == true) { this.transform.position += transform.up * Time.deltaTime * this.moveSpeed; }
+        }
     }
 }
