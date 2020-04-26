@@ -25,7 +25,7 @@ public class ClimbTrigger : MonoBehaviour
     }
     void Update()
     {
-        while (PlayerClimb = true)
+        while (PlayerClimb == true)
         {
             GetComponent<PlayerController>();
             if (Input.GetKey(KeyCode.W) == true) {transform.position += transform.up * Time.deltaTime * this.moveSpeed; }
