@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     //public Rigidbody theRB;
     public float jumpForce = 5f;
     public CharacterController controller;
+    public bool playerClimb = false;
 
     private Vector3 moveDirection;
     public float gravityScale;
@@ -47,9 +48,11 @@ public class PlayerController : MonoBehaviour
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
         controller.Move(moveDirection * Time.deltaTime);
 
-        if (GetComponent<ClimbTrigger>().PlayerClimb == true)
-        {
-            if (Input.GetKey(KeyCode.W) == true) { this.transform.position += transform.up * Time.deltaTime * this.moveSpeed; }
-        }
+        
+
+    }
+    public void coinPickupHandler()
+    {
+
     }
 }

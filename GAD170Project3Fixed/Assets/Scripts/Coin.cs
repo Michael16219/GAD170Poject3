@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
     public float spinSpeed = 100f;
+    public UnityEvent coinPickUpRaised;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        coinPickUpRaised.Invoke();
         Destroy(this.gameObject);
     }
 }

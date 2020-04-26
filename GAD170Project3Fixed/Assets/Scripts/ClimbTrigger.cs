@@ -23,12 +23,4 @@ public class ClimbTrigger : MonoBehaviour
             PlayerClimb = false;
         }
     }
-    void Update()
-    {
-        while (PlayerClimb == true)
-        {
-            GetComponent<PlayerController>();
-            if (Input.GetKey(KeyCode.W) == true) { transform.position += transform.up * Time.deltaTime * this.moveSpeed; }
-        }
-    }
 }
