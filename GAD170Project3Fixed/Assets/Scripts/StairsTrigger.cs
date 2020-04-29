@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
 
-public class TriggerBridge : MonoBehaviour
-{
-    public UnityEvent openBridgeTriggered;
 
+public class StairsTrigger : MonoBehaviour
+{
+    public UnityEvent onButtonPressed;
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-             openBridgeTriggered.Invoke();
+            onButtonPressed.Invoke();
         }
     }
 }

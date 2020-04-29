@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Events;
 using UnityEngine;
 
-public class TriggerBridge : MonoBehaviour
+public class LadderMove : MonoBehaviour
 {
-    public UnityEvent openBridgeTriggered;
+    public Transform LadderDestination;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-             openBridgeTriggered.Invoke();
+            Debug.Log("TeleportTrigger");
+
+            this.transform.position = LadderDestination.position;
+
         }
     }
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
 
-public class TriggerBridge : MonoBehaviour
+public class WallTrigger : MonoBehaviour
 {
-    public UnityEvent openBridgeTriggered;
+    public UnityEvent openWallTriggered;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-             openBridgeTriggered.Invoke();
+            openWallTriggered.Invoke();
         }
     }
 }
