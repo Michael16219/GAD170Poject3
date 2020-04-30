@@ -18,7 +18,7 @@ public class Sword : MonoBehaviour, Weapon
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetMouseButtonDown(0))
             PerformAttack();
     }
 }
