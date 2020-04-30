@@ -9,7 +9,8 @@ public class TeleportTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" )
+       // if (other.tag == "Player" )
+       if (other.GetComponent<PlayerController>())
         {
             Debug.Log("TeleportTrigger");
             

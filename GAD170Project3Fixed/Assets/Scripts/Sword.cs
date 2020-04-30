@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour, Weapon
 {
-    public float weaponDamage = 10f;
     private Animator animator;
 
     void Start()
