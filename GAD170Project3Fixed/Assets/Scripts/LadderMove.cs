@@ -5,7 +5,7 @@ using UnityEngine;
 public class LadderMove : MonoBehaviour
 {
     public Transform LadderDestination;
-
+    public Transform LadderTriggerTeleportDestiantion;
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -13,7 +13,7 @@ public class LadderMove : MonoBehaviour
             Debug.Log("TeleportTrigger");
 
             this.transform.position = LadderDestination.position;
-
+            LadderTriggerTeleportDestiantion.position = LadderDestination.position;
         }
     }
 }
