@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
         controller.Move(moveDirection * Time.deltaTime);
 
-        
+       
 
     }
     public void coinPickupHandler()
