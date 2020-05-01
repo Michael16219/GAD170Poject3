@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Reference: From gamesplusjames https://www.youtube.com/watch?v=IeuqDVKfJag
 public class CameraController : MonoBehaviour
 {
     public Transform target;
